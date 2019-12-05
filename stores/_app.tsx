@@ -1,6 +1,6 @@
 import App from 'next/app'
 import React from 'react'
-import { InjectStoreContext, initializeData } from '../store'
+import { InjectStoreContext, initializeData } from '../store_old'
 
 class MyMobxApp extends App {
   static async getInitialProps ({ Component, ctx }) {

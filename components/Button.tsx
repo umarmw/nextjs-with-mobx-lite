@@ -1,16 +1,16 @@
 import { useContext, useEffect } from 'react'
-import { StoreContext, updateProduct } from '../store'
+// import { StoreContext, updateProduct } from '../store_old'
 let flag = true;
 
 const Button = () => {
     
-    const store = useContext(StoreContext)
+    // const store = useContext(StoreContext)
 
     const handle = async(evt) => {
         
         const products = await getResult();
         console.log("products via button", products)
-        updateProduct(products);
+        this.props.updateProduct(products);
     }
 
     return (

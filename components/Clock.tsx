@@ -1,4 +1,4 @@
-function Clock (props) {
+const Clock = props => {
   return (
     <div className={props.light ? 'light' : ''}>
       {format(new Date(props.lastUpdate))}
@@ -24,4 +24,4 @@ const format = t =>
 
 const pad = n => (n < 10 ? `0${n}` : n)
 
-export default Clock
+export { Clock }
