@@ -1,18 +1,18 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import fetch from 'isomorphic-unfetch';
 import Button from '../components/button';
 import ProductContainer from '../components/ProductContainer';
+import { useRootData } from '../hook';
 
 const Index = (props) => {
 
-    // const store = useContext(StoreContext)
-
-    // useEffect(() => {
-    //     start()
-    //     updateProduct(props.products)
-    //     return stop
-    // }, [])
-
+    const { setProducts } = useRootData(store => ({
+        setProducts: store.setProducts
+    }));
+    
+    useEffect(() => {
+        setProducts(JSON.stringify(props.products));
+    }, [])
 
     return (
         <div>
